@@ -10,6 +10,10 @@ CONTENTS
 - B_TEXT ANALYSIS
 - C_MAPS
 - D_SUNDRIES & MISC
+
+
+There exists a wiki for this repository that contains full information and tutorials :
+[Wiki](https://github.com/FreeArtBureau/BIG_DADA_English-/wiki)
  
 
 ![screen shot 2015-09-08 at 10 58 02 am](https://cloud.githubusercontent.com/assets/1027891/9792475/8e7d949a-57e0-11e5-85e3-be6f20d1b77f.png)
