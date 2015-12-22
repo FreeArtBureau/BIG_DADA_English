@@ -1,62 +1,69 @@
 /*
 ::::::::::::::
-DATA_ESAD 2015
-::::::::::::::
-
-----------------
-D_RSS_Reader_01
-----------------
-RSS DELICIOUS
-PLUS D'INFO : http://fr.wikipedia.org/wiki/Delicious
-
-*/
+ DATA_ESAD 2015
+ ::::::::::::::
+ 
+ ------------------
+ D_RSS_Delicious_01
+ ------------------
+ RSS DELICIOUS
+ REF: http://fr.wikipedia.org/wiki/Delicious
+ 
+ */
 
 ////////////////////// GLOBALS
-// voir l'onglet INFO (changer l'adresse pour avoir
-// d'autres données
+// Please read INFO tab for further Delicious web feeds 
 String api  = "http://feeds.delicious.com/v2/rss/tags/"; 
-String user = "motiondesign"; // changer le nom d'utilisateur ici
+String user = "motiondesign"; // User name here
 int x = 10;
 int y = 20;
 
-DeliciousTag[] tags; // Liste de mots clés
+// Array of tags using custom class
+DeliciousTag[] tags; 
 
 /////////////////////////////////////// SETUP
 
 void setup() {
-  size(600,800);
+  size(600, 800);
   smooth();
   background(255);
   fill(0);
-  String url = api + user;
-  // On charge l'adresse dans un objet XML 
+  // Note that we create a new String variable.
+  String url = api + user; 
   XML rss = loadXML( url );
 
-  // Chaque contenu se trouve dans des balises à l'intérieur de la balise <channel>
   XML data[] = rss.getChildren("channel/item");
-  
-  // initialiser notre liste avec le même nombre d'éléments que 'data'
+
+  // initialise our tag object with the same length as data
   tags = new DeliciousTag[data.length];
-  
-  // On parcourt les données pour extraire les informations
+
+  // FOR loop to iterate through data
   for (int i=0; i < data.length; i++) {
+    
+    // We are going to store each element in a new XML object
     XML tagElement   = data[i].getChild("title"); 
     XML countElement = data[i].getChild("description");
     XML urlElement   = data[i].getChild("guid");
     
+    // Next, we get and store the contents for each of these elements
+    // Note the different methods
     String tag  = tagElement.getContent();
     int count   = Integer.parseInt( countElement.getContent() );
-    String lien  = urlElement.getContent();
+    String link  = urlElement.getContent();
     
-    tags[i] = new DeliciousTag(tag, lien, count);
+    // and finally we put all this data into our tag array object
+    // We now have a neat little object that has all three elements
+    // stored and easily accessible from one object. 
+    tags[i] = new DeliciousTag(tag, link, count);
     //print(url);
-    
+
     // Afficer tag / mots clés
     text(tag, x, y);
     //y+=30;
-    
-     // Afficer nombre de liens sauvegardés avec ce tag / mot clé
+
+    // Afficer nombre de liens sauvegardés avec ce tag / mot clé
     text(count, x+200, y);
     y+=15;
   }
 }
+

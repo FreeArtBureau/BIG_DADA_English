@@ -1,15 +1,15 @@
 /*
 ::::::::::::::
-DATA_ESAD 2015
-::::::::::::::
-
-----------------
-F_RSS_Reader_03
-----------------
-RSS DELICIOUS
-PLUS D'INFO : http://fr.wikipedia.org/wiki/Delicious
-
-*/ 
+ DATA_ESAD 2015
+ ::::::::::::::
+ 
+ ----------------
+ F_RSS_Reader_03
+ ----------------
+ RSS DELICIOUS
+ REF: http://fr.wikipedia.org/wiki/Delicious
+ 
+ */
 import java.util.*; 
 
 DeliciousAPI delicious;
@@ -26,38 +26,36 @@ void setup() {
   smooth();
   f = createFont("helvetica", 12);
   textFont(f);
-  // Initialiser notre connexion à Delicious
   delicious = new DeliciousAPI(this); 
-  // Récupérer les tags / mots clés de l'utilisateur
   tags = delicious.getUserTags( user, 1 );  
-    
-  // Compter nos tags
+
+  // Iterate tag data & count
   for (int i=0; i < tags.length; i++) {
     minCount = min(minCount, tags[i].count);
-    maxCount = max(maxCount, tags[i].count);    
+    maxCount = max(maxCount, tags[i].count);
   }
   println("Min count: " + minCount);
   println("Max count: " + maxCount);  
-  
-  // Calculer la position (x,y) en fonction de nombres de tags
+
+  // Clauculate position of our tags in relation to their count
   for (int i=0; i < tags.length; i++) {
-    tags[i].positionTag(minCount, maxCount);  
+    tags[i].positionTag(minCount, maxCount);
   }
 }
 
 ////////////////////////////////////////////////////////////////////////
 void draw() { 
   background(0);  
-  
-  // Affichage de nos tags / mots clés
+
+  // Display our tags 
   for (int i=0; i < tags.length; i++) {
     tags[i].display(); 
     if (pause == false) tags[i].animate();
-  }  
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////
 void mousePressed() {
-  pause = !pause;   
+  pause = !pause;
 }
 

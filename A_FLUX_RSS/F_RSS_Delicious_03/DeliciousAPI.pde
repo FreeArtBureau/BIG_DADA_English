@@ -65,5 +65,5 @@ CLASSE POUR SE CONNECTER À DELICIOUS
     tags.toArray(tagsArray);
     return tagsArray;
   }
-} // <-- end of DeliciousAPI class
+}
 

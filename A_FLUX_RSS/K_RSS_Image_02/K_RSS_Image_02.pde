@@ -57,8 +57,9 @@ void setup() {
 }
 
 /////////////////////////////////////// FUNCTIONS //////////////////////////////
-String extractImageSource(String s)
-{
+
+// Neat function as shared by Julien ;–)
+String extractImageSource(String s) {
   Pattern p = Pattern.compile("(?<=<img src=\")[^\"]*");
   Matcher m = p.matcher(s);
   if (m.find())

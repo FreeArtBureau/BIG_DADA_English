@@ -1,8 +1,9 @@
 /*
-CLASSE POUR SE CONNECTER À DELICIOUS
- Merci à David Bouchard
- http://www.deadpixel.ca
- */
+A simple class to manage tags
+Thanks to David Bouchard
+http://www.deadpixel.ca
+
+*/
 class DeliciousAPI {
 
   PApplet sketch;
@@ -14,7 +15,8 @@ class DeliciousAPI {
   } 
 
   // This method will give us an array of DeliciousTag objects
-  // for a given user 
+  // for a given user. Note we are returning an array (sorted)
+  // of data type DeliciousTag. 
   DeliciousTag[] getUserTags( String user ) {
 
     String url = api + "tags/" + user;  
@@ -38,9 +40,8 @@ class DeliciousAPI {
       tags[i] = new DeliciousTag(tag, lien, count);
     }
 
-    // Classe Java spéciale pour trier nos tags / mots clés
+    // Special Java class for sorting our tags. 
     Arrays.sort(tags); 
     return tags;
   }
-} // <-- end of DeliciousAPI class
-
+}

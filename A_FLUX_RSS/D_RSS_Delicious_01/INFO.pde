@@ -9,6 +9,7 @@
  
  /*
  Some examples of possible data :
+ Replace {format} with rss, {tag} by the tag &  {username} by the user
  
 Recent bookmarks
 http://feeds.delicious.com/v2/{format}/recent

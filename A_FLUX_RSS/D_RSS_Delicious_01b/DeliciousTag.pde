@@ -1,9 +1,10 @@
 /*
-Une classe simple pour gérer nos tags / mots clés
-Merci à David Bouchard
+A simple class to manage tags
+Thanks to David Bouchard
 http://www.deadpixel.ca
 
 */
+
 
 class DeliciousTag {
   

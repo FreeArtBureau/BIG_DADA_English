@@ -7,17 +7,15 @@ DATA_ESAD 2015
 D_RSS_Reader_01
 ----------------
 RSS DELICIOUS
-PLUS D'INFO : 
-http://fr.wikipedia.org/wiki/Delicious
-https://delicious.com/rss
+REF: https://delicious.com/rss
 
 */
 
 ////////////////////// GLOBALS
 
-String recent = "http://feeds.delicious.com/v2/rss/motiondesign/design";
-// nombre maximum de résultats
-int numResults = 20; 
+String recent = "http://feeds.delicious.com/v2/rss/recent";
+// Maximum number of results
+int numResults = 50; 
 XML data[];
 int x = 10;
 int y = 20;
@@ -29,8 +27,10 @@ void setup() {
   smooth();
   background(255);
   fill(0);
+  // Neat little function for initialising the connection & grabbing data
   initRSS();
-  // On parcourt les données pour extraire les informations
+  
+  // iterate data
   for (int i=0; i < data.length; i++) {
     XML tagElement   = data[i].getChild("title"); 
     String tag  = tagElement.getContent();
@@ -40,13 +40,12 @@ void setup() {
   }
 }
 
-////////////////////// RIEN à FAIRE
+////////////////////// Little function
 void initRSS() {
   String url = recent + "?count="+numResults;
   XML rss = loadXML (url);
   String form = rss.format(0);
   //println(form);
-  // Chaque contenu se trouve dans des balises à l'intérieur de la balise <channel>
   data = rss.getChildren("channel/item");
   
 }

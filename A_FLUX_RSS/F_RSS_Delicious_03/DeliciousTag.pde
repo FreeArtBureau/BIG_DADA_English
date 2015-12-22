@@ -1,7 +1,6 @@
 /*
-Une classe pour gérer nos tags / mots clés
-et les classer en fonction de sa fréqeunce
-Merci à David Bouchard
+A simple class to manage tags
+Thanks to David Bouchard
 http://www.deadpixel.ca
 
 */

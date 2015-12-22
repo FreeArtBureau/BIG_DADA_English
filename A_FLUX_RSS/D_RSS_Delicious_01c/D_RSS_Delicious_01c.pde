@@ -6,28 +6,19 @@ DATA_ESAD 2015
 ----------------
 D_RSS_Reader_01b
 
-Afficher les liens sauvegardés par un utilisateur de Delicious
-NOTE : Ce sketch affiche les titres et non pas les pages web
+Displays latest tags for a user
 ----------------
 RSS DELICIOUS
-PLUS D'INFO : 
-http://fr.wikipedia.org/wiki/Delicious
-https://delicious.com/rss
+REF : https://delicious.com/rss
 
 */
 
-////////////////////// LIRE /////////////////
-// changer d'utilisateur par ici (Essaie d'autres utilisateurs ;–))
-String user = "motiondesign"; 
-// nombre maximum de résultats
-int numResults = 100; 
-//////////////////////////////////////////// FIN
-
+String user = "motiondesign"; // User name here
+int numResults = 100; // Maximum number of results
 String api  = "http://feeds.delicious.com/v2/rss/";
 XML data[];
 int x = 10;
 int y = 20;
-
 
 /////////////////////////////////////// SETUP
 
@@ -36,25 +27,25 @@ void setup() {
   smooth();
   background(255);
   fill(0);
+   // Neat little function for initialising the connection & grabbing data
   initRSS();
-  // On parcourt les données pour extraire les informations
+  
+  // Iterate data
   for (int i=0; i < data.length; i++) {
     XML tagElement   = data[i].getChild("title"); 
     String titre  = tagElement.getContent();
 
-    text(titre, x, y); // on affiche les résultats ici avec la fonction text()
+    text(titre, x, y); // display results with text() function
     y+=15;
   }
 }
 
 
-////////////////////// RIEN à FAIRE
+////////////////////// Little function
 void initRSS() {
    String url = api + user + "?count="+numResults;
-  // On charge l'adresse dans un objet XML 
   XML rss = loadXML( url );
   String form = rss.format(0);
   //println(form);
-  // Chaque contenu se trouve dans des balises à l'intérieur de la balise <channel>
   data = rss.getChildren("channel/item");
 }
