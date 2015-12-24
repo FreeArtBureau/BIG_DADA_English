@@ -3,24 +3,27 @@
  DATA_ESAD 2015
  ::::::::::::::
  
- --------------
+ ---------------
  YahooWeather_01
- --------------
+ ---------------
+ 
+ Accesses YahooWeather RSS feeds
  
  */
  
 /////////////////////////// GLOBALS ////////////////////////////
-// Variable pour stocker la température
+// Variable for storing temperature
 int temperature = 0;
-// Variable pour stocker la condition météo
-String meteo = "";
+//  Variable for storing weather conditions
+String weather = " ";
 
 /*
- On récupère les données météorologiques par ville ou par région et par un chiffre spécifique.
- Ce chiffre est déterminé par Yahoo et il s'appelle WOEID (Where On Earth Identifiers)
- 575961 = WOEID pour Amiens
- 7153326 = WOEID pour Picardie
- Voir l'onglet INFO_WOEID pour connaitre les autres chiffres pour les régions de la France
+ We can access weather data for towns and regions using a special 
+ code called WOEID (Where On Earth Identifiers).
+ Eg.
+ 575961 = WOEID for Amiens
+ 7153326 = WOEID for the region Picardie
+ See tab INFO_WOEID to learn more.
  */
 String place = "575961"; // WOEID > Amiens
 String city = "";
@@ -32,26 +35,24 @@ XML result;
 
 void setup() {
   size(600, 360);
-  // La fonte pour notre texte
   font = createFont("Merriweather-Light.ttf", 28);
   textFont(font);
 
-  // ADRESSE WEB POUR YAHOO WEATHER
-    String url = "http://weather.yahooapis.com/forecastrss?w=" + place + "&u=c";
+  // RSS Web address
+  String url = "http://weather.yahooapis.com/forecastrss?w=" + place + "&u=c";
 
-  // CHARGER LES DONNÉES
+  // Load data
   XML xml = loadXML(url);
   String s = xml.format(0); // formats XML :–)
-  print(s);// Afficher le contenu brut en XML dans la console en bas.
+  print(s);// Raw data to console
   
-  // Voici une autre manière de récupérer des données directement
-  // d'une balise avec la méthode getChild()
+  // Notice syntax for String addresses
   XML forecast = xml.getChild("channel/item/yweather:forecast");
   XML location = xml.getChild("channel/yweather:location");
-  // On peut ensuite extraire les données voulues et les attribuer à nos variables
+  // Grab and store necessary data
   city = location.getString("city");
   temperature = forecast.getInt("high");
-  meteo = forecast.getString("text");
+  weather = forecast.getString("text");
 }
 
 /////////////////////////// DRAW ////////////////////////////
@@ -60,10 +61,10 @@ void draw() {
   background(255);
   fill(0);
 
-  // Affichage des données
+  // Display data
   text("City: " + city, width*0.15, height*0.33);
   text("Today’s high: " + temperature, width*0.15, height*0.5);
-  text("Forecast: " + meteo, width*0.15, height*0.66);
+  text("Forecast: " + weather, width*0.15, height*0.66);
  
 }
 

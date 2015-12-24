@@ -1,16 +1,16 @@
-/////////////////////////////// FUNCTION DE DESSIN
+/////////////////////////////// DRAWING FUNCTIONS
 
-void AfficheTexte() {
+void displayText() {
   fill(360,100,0);
-  // On affiche nos données
+  // Display textual data
   text("City: " + city, width*0.15, height*0.33);
   text("Today’s high: " + temperature, width*0.15, height*0.46);
-  text("Forecast: " + meteo, width*0.15, height*0.56);
-  text("Wind: " + vitesseVent, width*0.15, height*0.66);
+  text("Forecast: " + weather, width*0.15, height*0.56);
+  text("Wind: " + windSpeed, width*0.15, height*0.66);
 }
 
-////////////////////// DESSIN DE FOND QUI CHANGE DE COULEUR EN FONCTION DE LA TEMPERATURE
-void TemperatureBG() {
+////////////////////// 
+void temperatureBG() {
   noStroke();
   color c = (int)map(temperature, -10, 30, 70, 360);
   fill(c, 50, 100);
@@ -18,15 +18,15 @@ void TemperatureBG() {
 }
 
 
-////////////////////// DESSIN DE TRAME QUI BOUGE EN FONCTION DE LA VITESSE DU VENT
+////////////////////// 
 void lines() {
   stroke(0);
   strokeWeight(0.3);
 
   for (int yPos=75; yPos<height-75; yPos+=5) {
     for (int xPos=75; xPos<width-75; xPos+=5) {
-      float windSpeed =  map(vitesseVent, 0, 120, 0, 0.5);
-      float z = frameCount*windSpeed;
+      float ws =  map(windSpeed, 0, 120, 0, 0.5);
+      float z = frameCount*ws;
       float offSet = noise(xPos*noiseScale, yPos*noiseScale, z) * noiseAmm;
       pushMatrix();
       translate(xPos, yPos);
