@@ -36,7 +36,7 @@ void setup() {
   
   // Clauculate position of our tags in relation to their count
   for (int i=0; i < tags.length; i++) {
-    tags[i].positionTag(minCount, maxCount);  
+    tags[i].positionTag(minCount, maxCount); 
   }
 }
 

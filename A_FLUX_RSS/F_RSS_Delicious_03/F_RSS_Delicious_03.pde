@@ -37,7 +37,7 @@ void setup() {
   println("Min count: " + minCount);
   println("Max count: " + maxCount);  
 
-  // Clauculate position of our tags in relation to their count
+  // Calculate position of our tags in relation to their count
   for (int i=0; i < tags.length; i++) {
     tags[i].positionTag(minCount, maxCount);
   }
