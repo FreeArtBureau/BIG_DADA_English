@@ -44,13 +44,13 @@ void setup() {
   //String url = " http://feeds.delicious.com/v2/rss/networkmembers/"+ user + "?count=100"; // network query by user
 
   XML rss = loadXML( url );
-  XML[] title = rss.getChildren("channel/item/title");
+  XML[] data = rss.getChildren("channel/item/title");
   String s = rss.format(0); // formats XML :–)
   print(s);// Display raw XML in console
 
   // Iterate through the XML array to grab the content
-  for (int i = 0; i < title.length; i++) {    
-    text(title[i].getContent(), x, y);
+  for (int i = 0; i < data.length; i++) {    
+    text(data[i].getContent(), x, y);
     y+=20;
   }
 }

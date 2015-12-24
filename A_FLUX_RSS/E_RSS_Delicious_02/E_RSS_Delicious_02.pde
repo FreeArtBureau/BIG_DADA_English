@@ -3,9 +3,9 @@
 DATA_ESAD 2015
 ::::::::::::::
 
-----------------
-E_RSS_Reader_02
-----------------
+------------------
+E_RSS_Delicious_02
+------------------
 RSS DELICIOUS
 REF: http://fr.wikipedia.org/wiki/Delicious
 

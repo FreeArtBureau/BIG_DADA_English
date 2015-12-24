@@ -12,8 +12,8 @@ void AfficheTexte() {
 ////////////////////// DESSIN DE FOND QUI CHANGE DE COULEUR EN FONCTION DE LA TEMPERATURE
 void TemperatureBG() {
   noStroke();
-  color c = (int)map(temperature, -10, 30, 100, 360);
-  fill(c, 100, 100);
+  color c = (int)map(temperature, -10, 30, 70, 360);
+  fill(c, 50, 100);
   rect(50, 35, 500, 270);
 }
 
@@ -21,11 +21,11 @@ void TemperatureBG() {
 ////////////////////// DESSIN DE TRAME QUI BOUGE EN FONCTION DE LA VITESSE DU VENT
 void lines() {
   stroke(0);
-  strokeWeight(0.5);
+  strokeWeight(0.3);
 
-  for (int yPos=75; yPos<height-75; yPos+=6) {
-    for (int xPos=75; xPos<width-75; xPos+=6) {
-      float windSpeed =  map(vitesseVent, 0, 120, 0, 0.8);
+  for (int yPos=75; yPos<height-75; yPos+=5) {
+    for (int xPos=75; xPos<width-75; xPos+=5) {
+      float windSpeed =  map(vitesseVent, 0, 120, 0, 0.5);
       float z = frameCount*windSpeed;
       float offSet = noise(xPos*noiseScale, yPos*noiseScale, z) * noiseAmm;
       pushMatrix();

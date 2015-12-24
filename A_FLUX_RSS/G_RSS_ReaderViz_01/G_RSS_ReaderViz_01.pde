@@ -10,14 +10,13 @@
  
  */
 
-
 ////////////////////// GLOBALS
 
 PFont font;
-String[] content; // Variable String pour stocker le contenu
+String[] content;
 float y = 20;
 XML rss;
-XML[] title;
+XML[] data;
 /////////////////////////////////////// SETUP
 
 void setup() {
@@ -34,19 +33,16 @@ void setup() {
   //String url = "http://rss.lemonde.fr/c/205/f/3050/index.rss";
   //String url = "http://news.yahoo.com/rss/topstories";
 
-  // Adresse WEB
-  String url = "http://liberation.fr.feedsportal.com/c/32268/fe.ed/rss.liberation.fr/rss/latest/";
+  // Web Address
+  String url = "http://feeds.bbci.co.uk/news/uk/rss.xml"; 
 
-  // On charge l'adresse dans un objet XML 
+
   rss = loadXML(url);
-  // On accède aux données et les stockent dans la variable title
-  title = rss.getChildren("channel/item/title");
+  data = rss.getChildren("channel/item/title");
 
-  content = new String[title.length];
-  for (int i = 0; i < title.length; i++) {
-    //On accéde aux données stockées dans la variable title
-    // et on les passe dans notre variable content
-    content[i] = title[i].getContent();
+  content = new String[data.length];
+  for (int i = 0; i < data.length; i++) {
+    content[i] = data[i].getContent();
   }
 }
 
@@ -54,27 +50,25 @@ void setup() {
 void draw() {
   //  background(0);
 
-  afficherTitres();
+  displayTitles();
 }
 
 
 
 //////////////////////////////////// FUNCTION
-void afficherTitres() {
+void displayTitles() {
   // background(0);
   fill(255);
   for (int i = 0; i < content.length; i++) {
-    // On se sert de la longueur des données - le nombre de caractères dans le texte
-    // pour changer la couleur
+    // We use the length of our content data to determine colour
     fill(0 + constrain(content[i].length(), 0, 255));
     rect(8, y - 11, 14, 14);
 
-    // On se sert de la longueur des données - le nombre caractères
-    // pour changer la longeur du rect
+    // ...as well as the length of our bar graphics
     fill(255, 100);
     rect(23, y - 11, content[i].length() * 2, 14);
 
-    // On affiche les données
+    // Display textual data
     fill(255, 220);
     text(content[i], 50, y);
     y+=20;

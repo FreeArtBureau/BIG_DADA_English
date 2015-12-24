@@ -33,6 +33,8 @@ void setup() {
   XML rss = loadXML( url );
 
   XML data[] = rss.getChildren("channel/item");
+  String s = rss.format(0); // formats XML :–)
+  print(s);// Display raw XML in console
 
   // initialise our tag object with the same length as data
   tags = new DeliciousTag[data.length];
@@ -57,11 +59,10 @@ void setup() {
     tags[i] = new DeliciousTag(tag, link, count);
     //print(url);
 
-    // Afficer tag / mots clés
+    // Display tag
     text(tag, x, y);
-    //y+=30;
-
-    // Afficer nombre de liens sauvegardés avec ce tag / mot clé
+ 
+    // Display tag count. ie. number of bookmarks saved with this tag
     text(count, x+200, y);
     y+=15;
   }

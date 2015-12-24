@@ -1,15 +1,15 @@
 /*
-WOEID pour la France :
+WOEID for France :
 [Where On Earth Identity]
-Voir : http://weather.yahoo.com/
+REF : http://weather.yahoo.com/
 
-Ensuite récupérer le chiffre dans l'adresse Web :
+The WOEID code can be found at the end of the search result web address :
 https://weather.yahoo.com/france/picardy/amiens-575961/
 
 575961 = Amiens
 
-//////////////////////////////////////////////////// Exemples
-> > > Régions :
+//////////////////////////////////////////////////// Examples
+> > > Regions :
 
 Alsace
 7153330
@@ -80,7 +80,7 @@ Upper Normandy
 
 /////////////////////// For fun : Saint-Denis, La Réunion : 1511237
 
-> > > Grandes Villes :
+> > > Major cities :
 
 Amiens
 575961

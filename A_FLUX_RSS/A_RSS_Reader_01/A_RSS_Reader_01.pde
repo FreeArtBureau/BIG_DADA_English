@@ -43,7 +43,7 @@ void setup() {
   // All content for this feed will be found between the tag <channel>
   // .getChildren method enables us to access the tag <title>
   // Note that we create a XML array object, in which the data will be stored
-  XML[] title = rss.getChildren("channel/item/title");
+  XML[] data = rss.getChildren("channel/item/title");
   String s = rss.format(0); // formats XML :–)
   print(s);// Display raw data in the console.
 
@@ -51,9 +51,9 @@ void setup() {
   XML[] description = rss.getChildren("channel/item/description");
 
   // FOR loop to iterate through stored data 
-  for (int i = 0; i < title.length; i++) { 
+  for (int i = 0; i < data.length; i++) { 
     // .getContent does exactly what it says ;—)   
-    text(title[i].getContent(), x, y);
+    text(data[i].getContent(), x, y);
     
     // Display summaries...
     text(description[i].getContent(), x, y+20);

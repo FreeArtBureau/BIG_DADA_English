@@ -1,6 +1,5 @@
 /*
-CLASSE POUR SE CONNECTER À DELICIOUS
- Merci à David Bouchard
+ Thanks to  David Bouchard
  http://www.deadpixel.ca
 */
  

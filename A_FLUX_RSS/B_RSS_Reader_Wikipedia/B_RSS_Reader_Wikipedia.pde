@@ -1,4 +1,4 @@
-B/*
+/*
 ::::::::::::::
  DATA_ESAD 2015
  ::::::::::::::
@@ -37,7 +37,7 @@ void setup() {
   //String url = "https://en.wikipedia.org/w/index.php?title=Special:NewPages&feed=rss"; 
 
   XML rss = loadXML( url );
-  XML[] title = rss.getChildren("channel/item/title");
+  XML[] data = rss.getChildren("channel/item/title");
   String s = rss.format(0); // formats XML :–)
   print(s); //Display raw data in the console.
 
@@ -45,8 +45,8 @@ void setup() {
   XML[] date = rss.getChildren("channel/item/pubDate");
 
   //Note we are using the same loop to iterate two pieces of data
-  for (int i = 0; i < title.length; i++) {    
-    text(title[i].getContent(), x, y);
+  for (int i = 0; i < data.length; i++) {    
+    text(data[i].getContent(), x, y);
     text(date[i].getContent(), x, y+20);
     y+=40;
   }
