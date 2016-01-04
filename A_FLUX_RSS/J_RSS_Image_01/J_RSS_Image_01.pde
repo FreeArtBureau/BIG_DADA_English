@@ -31,10 +31,6 @@ void setup() {
   smooth();
   // Charger les liens d'images
   liens = loadLinks(url);
-}
-
-///////////////////////////////////// DRAW
-void draw() {
   background(0);
 
   // Affichage de nos images 
@@ -51,6 +47,10 @@ void draw() {
   // Affichage du nombre d'images trouvées
   textSize(36);
   text("Images trouvées : " + liens.length, 50, 500);
+}
+
+///////////////////////////////////// DRAW
+void draw() {
 }
 
 
