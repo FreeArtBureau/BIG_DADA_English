@@ -6,4 +6,4 @@ These sketches in no way attempt to reveal anything about data. They demonstrate
 
 [There exists a wiki for this repository that contains full information and tutorials.](https://github.com/FreeArtBureau/BIG_DADA_English/wiki)
 
-![snapshot_359](https://cloud.githubusercontent.com/assets/1027891/12080357/8876f686-b258-11e5-8b1a-100fc91816bd.png)
+![snapshot_572](https://cloud.githubusercontent.com/assets/1027891/12224033/5a3cb41a-b7e7-11e5-9da7-d053bcf6110b.png)
