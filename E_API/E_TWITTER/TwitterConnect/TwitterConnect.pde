@@ -7,10 +7,9 @@
  *
  * KEY : YOU WILL NEED TO SIGN UP FOR A UNIQUE API KEY
  * https://apps.twitter.com
- *
- * MW_2017
+ * YOU WILL ALSO NEED TO DOWNLOAD & INCLUDE THE TWITTER 4J Library
  * http://twitter4j.org
- *
+ * MW_2017
  *
  * end
 
