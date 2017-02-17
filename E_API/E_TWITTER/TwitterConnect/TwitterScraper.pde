@@ -74,6 +74,7 @@ List<Status> getNewTweets(String searchString, int _n) {
           println("User: "+status.getUser().getName());
           println("Location: "+status.getUser().getLocation());
           println("Friends Count: "+status.getUser().getFriendsCount());
+          println("Followers Count: "+status.getUser().getFollowersCount());
           println("----------------------> end");
 
           // GeoLocation [si possible]
