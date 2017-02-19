@@ -2,13 +2,13 @@
 ::::::::::::::
  DATA_ESAD 2015
  ::::::::::::::
- 
+
  --------------
  RSS_Image_02
  --------------
- 
+
  */
- 
+
 import java.util.regex.*;
 
 PFont myFont;
@@ -40,12 +40,12 @@ void setup() {
    }
    */
 
-  for (int i = 0; i < des.length; i++) { 
-    String content = des[i].getContent(); 
+  for (int i = 0; i < des.length; i++) {
+    String content = des[i].getContent();
     //println(des[i]);
     String imageURL = extractImageSource(content);
    // println(i+" | "+extractImageSource(content));
-    
+
     img = loadImage(imageURL);
     image(img,x,y);
     x+=100;
@@ -53,7 +53,7 @@ void setup() {
       x=10;
     y+=100;
     }
-  } 
+  }
 }
 
 /////////////////////////////////////// FUNCTIONS //////////////////////////////
@@ -66,4 +66,3 @@ String extractImageSource(String s) {
     return m.group();
   return "";
 }
-
