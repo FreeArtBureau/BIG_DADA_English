@@ -2,11 +2,11 @@
 ::::::::::::::
  DATA_ESAD 2015
  ::::::::::::::
- 
+
  --------------
  RSS_Image_01
  --------------
- 
+
  */
 
 ////////////////////// GLOBALS
@@ -14,13 +14,13 @@
 /*
 // Quelques adresses :
  http://liberation.fr.feedsportal.com/c/32268/fe.ed/rss.liberation.fr/rss/latest/
- 
+
  // Attention : les images du site le Monde sont assez grandes - donc patience pour les afficher
  http://rss.lemonde.fr/c/205/f/3050/index.rss
  http://newsrss.bbc.co.uk/rss/newsonline_world_edition/technology/rss.xml
  */
 
-// Adresse WEB 
+// Adresse WEB
 String url = "http://newsrss.bbc.co.uk/rss/newsonline_world_edition/technology/rss.xml";
 // On va stocker les liens pour les images dans cette variable
 String[] liens;
@@ -33,7 +33,7 @@ void setup() {
   liens = loadLinks(url);
   background(0);
 
-  // Affichage de nos images 
+  // Affichage de nos images
   fill(255);
   for (int i = 0; i < liens.length; i++) {
     //text(liens[i],10,16+i*16);
@@ -65,7 +65,7 @@ String[] loadLinks(String s) {
   String html = join(lines, "\n");
 
   // A wacky regex for matching a URL
-  // <url=" "> 
+  // <url=" ">
   String regex = "url\\s*=\\s*\"(.*?)\"";
   // The matches are in a two dimensional array
   // The first dimension is all matches
@@ -83,4 +83,3 @@ String[] loadLinks(String s) {
   // Return the results
   return results;
 }
-
