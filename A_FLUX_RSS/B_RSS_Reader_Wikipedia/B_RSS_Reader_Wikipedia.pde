@@ -2,16 +2,20 @@
 ::::::::::::::
  DATA_ESAD 2015
  ::::::::::::::
- 
+
  ----------------------
  B_RSS_Reader_Wikipedia
  ----------------------
- WIKIPEDIA RSS 
+ WIKIPEDIA RSS
  REF : http://fr.wikipedia.org/wiki/Wikipédia:Syndication
- 
+
  In this example, we access Wikipedias RSS to find out the latest articles to have
  been modified. We can also search a particular article by name and see what has
  changed there specifically.
+
+ * NB 2017 > Wikipedia can also be queried using MediaWiki's API
+ * https://www.mediawiki.org/wiki/API:Main_page
+ *
  */
 
 ////////////////////// GLOBALS
@@ -30,11 +34,11 @@ void setup() {
   textFont(myFont);
   fill(255);
 
-  // This address accesses a specific article by name 
-  String url = "https://en.wikipedia.org/w/index.php?title="+subject+"&action=history&feed=rss"; 
+  // This address accesses a specific article by name
+  String url = "https://en.wikipedia.org/w/index.php?title="+subject+"&action=history&feed=rss";
 
   // This address accesses latest modifications
-  //String url = "https://en.wikipedia.org/w/index.php?title=Special:NewPages&feed=rss"; 
+  //String url = "https://en.wikipedia.org/w/index.php?title=Special:NewPages&feed=rss";
 
   XML rss = loadXML( url );
   XML[] data = rss.getChildren("channel/item/title");
@@ -45,10 +49,9 @@ void setup() {
   XML[] date = rss.getChildren("channel/item/pubDate");
 
   //Note we are using the same loop to iterate two pieces of data
-  for (int i = 0; i < data.length; i++) {    
+  for (int i = 0; i < data.length; i++) {
     text(data[i].getContent(), x, y);
     text(date[i].getContent(), x, y+20);
     y+=40;
   }
 }
-
