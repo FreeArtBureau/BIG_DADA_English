@@ -2,12 +2,12 @@
 ::::::::::::::
  DATA_ESAD 2015
  ::::::::::::::
- 
+
  --------------
  RSS_Reader_03
  --------------
  * (c) 2008 Till Nagel, btk.tillnagel.com
- 
+
  */
 
 ////////////////////// GLOBALS
@@ -34,7 +34,7 @@ void setup() {
   //String url = "http://news.yahoo.com/rss/topstories";
 
   // Web Address
-  String url = "http://feeds.bbci.co.uk/news/uk/rss.xml"; 
+  String url = "http://feeds.bbci.co.uk/news/uk/rss.xml";
 
 
   rss = loadXML(url);
@@ -74,4 +74,3 @@ void displayTitles() {
     y+=20;
   }
 }
-
