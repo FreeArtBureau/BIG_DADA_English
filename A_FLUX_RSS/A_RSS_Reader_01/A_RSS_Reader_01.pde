@@ -1,7 +1,7 @@
 /*
-::::::::::::::
- DATA_ESAD 2015
- ::::::::::::::
+ :::::::::::::::
+  BIG_DADA 2017
+ :::::::::::::::
 
  --------------
  RSS_Reader_01
@@ -25,12 +25,16 @@ void setup() {
   textFont(myFont);
   fill(255);
   /*
-  // A few RSS web addresses. Many more can be found :
+   http://www.nytimes.com/services/xml/rss/index.html 
+  
+   A few RSS web addresses. Many more can be found :
+   
    http://newsrss.bbc.co.uk/rss/newsonline_world_edition/technology/rss.xml
    http://feeds.bbci.co.uk/news/uk/rss.xml
    http://rss.liberation.fr/rss/9/
    http://www.lemonde.fr/rss/une.xml
    http://news.yahoo.com/rss/topstories
+   http://rss.nytimes.com/services/xml/rss/nyt/World.xml
    */
 
   // Web feed address
@@ -39,10 +43,10 @@ void setup() {
   // We assign this address to a XML object
   XML rss = loadXML( url );
 
-
   // All content for this feed will be found between the tag <channel>
   // .getChildren method enables us to access the tag <title>
   // Note that we create a XML array object, in which the data will be stored
+  
   XML[] data = rss.getChildren("channel/item/title");
   String s = rss.format(0); // formats XML :–)
   print(s);// Display raw data in the console.
@@ -57,7 +61,7 @@ void setup() {
 
     // Display summaries...
     text(description[i].getContent(), x, y+20);
-    y+=40;
+    y+=45;
   }
 
 
