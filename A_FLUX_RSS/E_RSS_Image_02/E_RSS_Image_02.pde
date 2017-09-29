@@ -1,12 +1,14 @@
-/*
-::::::::::::::
- DATA_ESAD 2015
- ::::::::::::::
-
- --------------
- RSS_Image_02
- --------------
-
+/* ----------
+ * RSS_Reader
+ * ----------
+ *
+ * Sketch : RSS_Image_02
+ * Grabs images from an RSS feed
+ *
+ *
+ * MW_2017
+ *
+ * end
  */
 
 import java.util.regex.*;
@@ -28,7 +30,10 @@ void setup() {
   myFont = createFont("helvetica", 12);
   textFont(myFont);
   fill(0);
-  XML data= loadXML("http://earthquake.usgs.gov/earthquakes/shakemap/rss.xml");
+  //https://earthquake.usgs.gov/earthquakes/feed/v1.0/atom.php
+  //https://earthquake.usgs.gov/fdsnws/event/1/
+  // https://earthquake.usgs.gov/earthquakes/feed/v1.0/atom.php
+  XML data= loadXML("http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.atom");
   XML[] post = data.getChildren("channel/item/title");
   XML[] des = data.getChildren("channel/item/description");
 

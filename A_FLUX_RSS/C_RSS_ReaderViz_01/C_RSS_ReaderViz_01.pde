@@ -1,13 +1,14 @@
-/*
- :::::::::::::::
- BIG_DADA 2017
- :::::::::::::::
- 
- --------------
- RSS_Reader_03
- --------------
+/* ----------
+ * RSS_Reader
+ * ----------
+ *
+ * Sketch : RSS_ReaderViz_01
+ * Grabs an RSS feed & does a simple data Viz based on text length
+ *
+ *
+ * MW_2017
  * (c) 2008 Till Nagel, btk.tillnagel.com
- 
+ * end
  */
 
 ////////////////////// GLOBALS
@@ -21,22 +22,13 @@ XML[] data;
 
 void setup() {
   size(700, 850);
-  background(0);
+  background(0, 0, 33);
   noStroke();
   font = createFont("helvetica", 12);
   textFont(font);
   fill(255);
 
-  // Load RSS feed
-  //String url = "http://liberation.fr.feedsportal.com/c/32268/fe.ed/rss.liberation.fr/rss/latest/";
-  //String url = "http://actualite.lachainemeteo.com/meteo-rss/actualite-meteo.xml";
-  //String url = "http://rss.lemonde.fr/c/205/f/3050/index.rss";
-  //String url = "http://news.yahoo.com/rss/topstories";
-
-  // Web Address
   String url = "http://feeds.bbci.co.uk/news/uk/rss.xml";
-
-
   rss = loadXML(url);
   data = rss.getChildren("channel/item/title");
 
@@ -44,15 +36,9 @@ void setup() {
   for (int i = 0; i < data.length; i++) {
     content[i] = data[i].getContent();
   }
-}
-
-/////////////////////////////////////////// DRAW
-void draw() {
-  //  background(0);
-
+  
   displayTitles();
 }
-
 
 
 //////////////////////////////////// FUNCTION

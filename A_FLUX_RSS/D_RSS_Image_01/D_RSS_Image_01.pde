@@ -1,12 +1,14 @@
-/*
-::::::::::::::
- DATA_ESAD 2015
- ::::::::::::::
-
- --------------
- RSS_Image_01
- --------------
-
+/* ----------
+ * RSS_Reader
+ * ----------
+ *
+ * Sketch : RSS_Image
+ * Grabs images from an RSS feed
+ *
+ *
+ * MW_2017
+ *
+ * end
  */
 
 ////////////////////// GLOBALS
@@ -22,6 +24,7 @@
 
 // Adresse WEB
 String url = "http://newsrss.bbc.co.uk/rss/newsonline_world_edition/technology/rss.xml";
+
 // On va stocker les liens pour les images dans cette variable
 String[] liens;
 
@@ -41,11 +44,12 @@ void setup() {
     PImage imageURL = loadImage(liens[i]);
     // ... on les affiches [si vous chager les images du Monde, divise imageURL.width & imageURL.height par 20
     //  par exemple // image(imageURL, random(width), random(height), imageURL.width/20, imageURL.height/20);
-    image(imageURL, random(width), random(height), imageURL.width, imageURL.height);
+    image(imageURL, random(width), random(height), imageURL.width/10, imageURL.height/10);
   }
 
   // Affichage du nombre d'images trouvées
   textSize(36);
+  fill(0,255,255);
   text("Images trouvées : " + liens.length, 50, 500);
 }
 
