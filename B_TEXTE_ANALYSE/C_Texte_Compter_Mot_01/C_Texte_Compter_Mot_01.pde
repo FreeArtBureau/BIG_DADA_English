@@ -24,8 +24,6 @@ WordCount words;
 ////////////////////////////////// SETUP //////////////////////////////
 
 void setup() {
-  size(40, 40);
-    
   // On charge les mots dans notre variable 
   // SI VOUS VOULEZ CHANGER DE TEXTE, C'EST PAR ICI ;–)
   lines = loadStrings("shortText.txt");
@@ -44,5 +42,3 @@ void draw() {
 }
 
 ////////////////////////////////////////////////////////////////////
-
-

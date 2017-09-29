@@ -6,8 +6,7 @@
  class WeatherAPI {
 
   JSONObject json;
-  //String myKey = " --- YOUR API KEY HERE --- ";
-  String myKey = "3f7bf9f71093f2b3bf4422dbf0984e3a";
+  String myKey = " --- YOUR API KEY HERE --- ";
   String city;
   String units = "metric"; // or imperial
   String url;
