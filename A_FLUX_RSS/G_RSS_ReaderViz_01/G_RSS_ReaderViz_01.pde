@@ -1,13 +1,13 @@
 /*
  :::::::::::::::
-  BIG_DADA 2017
+ BIG_DADA 2017
  :::::::::::::::
-
+ 
  --------------
  RSS_Reader_03
  --------------
  * (c) 2008 Till Nagel, btk.tillnagel.com
-
+ 
  */
 
 ////////////////////// GLOBALS
@@ -57,7 +57,6 @@ void draw() {
 
 //////////////////////////////////// FUNCTION
 void displayTitles() {
-  // background(0);
   fill(255);
   for (int i = 0; i < content.length; i++) {
     // We use the length of our content data to determine colour

@@ -1,6 +1,6 @@
-/* ----------------------------
+/* -----------------------------
  * Guardian Word Search Articles
- * ----------------------------
+ * -----------------------------
  *
  * Sketch : Guardian_00b
  * Grabs latest articles based on a tag
@@ -47,5 +47,3 @@ void grabAPIData(String s) {
   print(json); // print raw data to console for debugging
 
 }
-
-
