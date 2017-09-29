@@ -1,3 +1,19 @@
+import processing.core.*; 
+import processing.data.*; 
+import processing.event.*; 
+import processing.opengl.*; 
+
+import java.util.HashMap; 
+import java.util.ArrayList; 
+import java.io.File; 
+import java.io.BufferedReader; 
+import java.io.PrintWriter; 
+import java.io.InputStream; 
+import java.io.OutputStream; 
+import java.io.IOException; 
+
+public class C_RSS_Reader_Delicious extends PApplet {
+
 /*
 ::::::::::::::
  DATA_ESAD 2015
@@ -11,7 +27,7 @@
 
  Delicious is a book mark management service.
  It is not used so much nowadays but is an interesting source of information
- if you have used it in the past or want ot access other users' bookmarks ;–)
+ if you have used it in the past or want ot access other users' bookmarks ;\u2013)
  */
 
 ////////////////////// GLOBALS
@@ -24,10 +40,10 @@ String tag = "code";
 String user = "motiondesign";
 
 /////////////////////////////////////// SETUP
-void setup() {
-  size(800, 900);
+public void setup() {
+  
   background(0);
-  smooth();
+  
   myFont = createFont("helvetica", 14);
   textFont(myFont);
   fill(255);
@@ -45,12 +61,22 @@ void setup() {
 
   XML rss = loadXML( url );
   XML[] data = rss.getChildren("channel/item/title");
-  String s = rss.format(0); // formats XML :–)
+  String s = rss.format(0); // formats XML :\u2013)
   print(s);// Display raw XML in console
 
   // Iterate through the XML array to grab the content
   for (int i = 0; i < data.length; i++) {
     text(data[i].getContent(), x, y);
     y+=20;
+  }
+}
+  public void settings() {  size(800, 900);  smooth(); }
+  static public void main(String[] passedArgs) {
+    String[] appletArgs = new String[] { "C_RSS_Reader_Delicious" };
+    if (passedArgs != null) {
+      PApplet.main(concat(appletArgs, passedArgs));
+    } else {
+      PApplet.main(appletArgs);
+    }
   }
 }
