@@ -35,7 +35,7 @@ void draw() {
   // textLines.length est égal au nombre de lignes dans notre texte
   for ( int i = 0; i < textLines.length; i++ ) {
     // Affichage du texte brute dans la console en bas
-    println( i + ". " + textLines[i] );
+    println( i + " - " + textLines[i] );
     println("Cette ligne contient "+textLines[i].length()+" caractères");
     
     // Affichage du texte ligne par ligne
@@ -55,4 +55,3 @@ void draw() {
     ellipse( 530, 40+i * 30, d, d );
   }
 }
-

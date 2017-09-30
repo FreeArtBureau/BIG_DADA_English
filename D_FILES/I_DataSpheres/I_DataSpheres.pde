@@ -18,7 +18,7 @@
  */
 
 /////////////////////////// GLOBALS ////////////////////////////
-import pbox2d.*;
+import shiffman.box2d.*;
 import org.jbox2d.collision.shapes.*;
 import org.jbox2d.common.*;
 import org.jbox2d.dynamics.*;
@@ -26,7 +26,7 @@ import processing.opengl.*;
 import processing.pdf.*;
 
 
-PBox2D box2d; // This is our Box2D World !
+Box2DProcessing box2d; // This is our Box2D World !
 
 String[] rows;
 Spheres[] s;
@@ -46,7 +46,7 @@ void setup() {
   smooth();
 
   rows = loadStrings("data_01.tsv");
-  box2d = new PBox2D(this);
+  box2d = new Box2DProcessing(this);
   box2d.createWorld();
   box2d.setGravity(0, 0);
   
@@ -89,4 +89,3 @@ void keyPressed() {
   if (key == 'e')
     endRecord();
 }
-
