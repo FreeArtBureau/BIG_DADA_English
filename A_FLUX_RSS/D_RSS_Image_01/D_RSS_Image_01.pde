@@ -18,13 +18,14 @@ void setup() {
   size(800, 560);
   background(0);
   
-  String url = "http://newsrss.bbc.co.uk/rss/newsonline_world_edition/technology/rss.xml";  
+  String url = "http://newsrss.bbc.co.uk/rss/newsonline_world_edition/technology/rss.xml"; 
+  
   XML rss = loadXML( url );
   XML[] data = rss.getChildren("channel/item/title");
   String s = rss.format(0); // formats XML :–)
   //print(s); 
   
-  // get image urls
+  // get image urls. Note that you may have to change to tag name depending on the RSS
   XML[] imageURLElements = rss.getChildren("channel/item/media:thumbnail");
   
   for(int i=0; i<imageURLElements.length; i++) {
