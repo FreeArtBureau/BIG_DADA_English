@@ -21,7 +21,6 @@ void setup() {
   String url = "http://newsrss.bbc.co.uk/rss/newsonline_world_edition/technology/rss.xml"; 
   
   XML rss = loadXML( url );
-  XML[] data = rss.getChildren("channel/item/title");
   String s = rss.format(0); // formats XML :–)
   //print(s); 
   
