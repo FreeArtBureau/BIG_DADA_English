@@ -15,6 +15,7 @@
 ////////////////////////////////////////////////////////////////////
 
 JsonData data;
+// New data type for storing & retrieving data
 JSONContent[] jsonData;
 
 void setup() {
@@ -27,6 +28,9 @@ void setup() {
   for (int i=0; i<jsonData.length; i++) {
     println(jsonData[i].title);
     println(jsonData[i].type);
+    println(jsonData[i].lends);
+    println(jsonData[i].rank);
+    println("////////////////");
   }
 }
 
