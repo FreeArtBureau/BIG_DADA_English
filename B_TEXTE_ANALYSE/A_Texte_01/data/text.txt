@@ -1,0 +1,26 @@
+Behind the sliding glass door of Makers Academy in Shoreditch, east London, one afternoon in early October, 
+an inhouse yoga teacher was leading a group of casually dressed young men and women in an afternoon meditation. 
+With its ping-pong table, hammock and stash of Nerf guns, Makers looks like every digital startup cliche. But it is a 
+coding bootcamp, where adults who want to change careers pay £8,000 for a three-month crash course that promises 
+to equip them for jobs in a digital world. Only half-joking, many refer to it as “Oxbridge meets the Royal Marines for
+ developers”. Nine out of 10 applicants are rejected – the academy’s profit comes from a levy on employers who hire 
+its students, so it takes only those considered employable. Anyone who is judged not to be working hard enough is 
+ejected in the first few weeks, which culls about another fifth. The survivors sit at long banks of screens, where they 
+are supposed to spend nine hours a day learning to program computers, although most choose to stay long into the 
+night, practising what they have learned. They work in pairs to bounce ideas off each other and, although there is a 
+helpdesk for those stuck on complex coding problems, there is no teacher to give instructions. The idea is to encourage 
+self-sufficiency and the ability to muddle through with peers, as they will have to do when they reach the workplace. 
+Every now and then, from an office in the loft, comes the sound of a gong being struck: the signal that another Makers
+ graduate has just landed a job. Related: Why every child should learn to code “Everyone should learn how to program 
+a computer, because it teaches you how to think.” It is now 20 years since Steve Jobs said those words, in an interview
+ unearthed and released two years after his death. Last year, Britain became the first G7 country to introduce compulsory
+ computer science on the school curriculum for all children aged five to 16. By the age of seven, all children will now be 
+expected to be capable of writing and debugging a simple program. By 11, some will be exploring computing concepts 
+once considered appropriate for undergraduates. The idea that mastering code is as essential to a successful start in life 
+as numeracy and literacy is starting to take hold of British parents. Christmas stockings this year will be stuffed with 
+“smart toys” – brightly coloured programmable plastic robots, apps and even board games that promise to give kids a
+ head start on coding. How do you make toast? is a frequent interview question. The ideal answer is close to one a robot 
+could understand Since 2013, more than 140 million adults worldwide have downloaded a starter coding lesson from the 
+industry-funded Hour of Code, a non-profit initiative that aims to increase access to coding skills. What is rather less clear, 
+however, is how many finished and how many gave up halfway through. Learning to code, especially later in life, is not easy. 
+
