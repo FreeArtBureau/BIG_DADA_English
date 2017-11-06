@@ -1,0 +1,324 @@
+﻿[
+ {
+   "num": 1,
+   "aire": 114.06,
+   "surface": 54.26,
+   "genre": "3F66AE",
+   "titre": "à la recherche du temps perdu"
+ },
+ {
+   "num": 2,
+   "aire": 15.26,
+   "surface": 50.42,
+   "genre": "3F66AE",
+   "titre": "clarissa"
+ },
+ {
+   "num": 3,
+   "aire": 79.2,
+   "surface": 60.61,
+   "genre": "3F66AE",
+   "titre": "les misérables"
+ },
+ {
+   "num": 4,
+   "aire": 51.24,
+   "surface": 61.86,
+   "genre": "3F66AE",
+   "titre": "le vicomte de bragelonne"
+ },
+ {
+   "num": 5,
+   "aire": 115.3,
+   "surface": 51.74,
+   "genre": "3F66AE",
+   "titre": "artamène"
+ },
+ {
+   "num": 6,
+   "aire": 38.45,
+   "surface": 65.36,
+   "genre": "3F66AE",
+   "titre": "guerre et paix"
+ },
+ {
+   "num": 7,
+   "aire": 5.01,
+   "surface": 52.34,
+   "genre": "3F66AE",
+   "titre": "de sang froid"
+ },
+ {
+   "num": 8,
+   "aire": 5.24,
+   "surface": 52.34,
+   "genre": "3F66AE",
+   "titre": "voir"
+ },
+ {
+   "num": 9,
+   "aire": 5.92,
+   "surface": 52.34,
+   "genre": "3F66AE",
+   "titre": "ravage"
+ },
+ {
+   "num": 10,
+   "aire": 5.98,
+   "surface": 66.12,
+   "genre": "3F66AE",
+   "titre": "fourmis"
+ },
+ {
+   "num": 11,
+   "aire": 6.7,
+   "surface": 52.34,
+   "genre": "3F66AE",
+   "titre": "un barrage contre la pacifique"
+ },
+ {
+   "num": 12,
+   "aire": 6.59,
+   "surface": 61.71,
+   "genre": "3F66AE",
+   "titre": "la petite maison dans la prairie"
+ },
+ {
+   "num": 13,
+   "aire": 13.37,
+   "surface": 68.64,
+   "genre": "3F66AE",
+   "titre": "da vinci code"
+ },
+ {
+   "num": 14,
+   "aire": 3.18,
+   "surface": 62.18,
+   "genre": "3F66AE",
+   "titre": "la mécanique du coeur"
+ },
+ {
+   "num": 15,
+   "aire": 6.74,
+   "surface": 52.34,
+   "genre": "3F66AE",
+   "titre": "le premier homme"
+ },
+ {
+   "num": 16,
+   "aire": 5.65,
+   "surface": 51.74,
+   "genre": "3F66AE",
+   "titre": "diego et frida"
+ },
+ {
+   "num": 17,
+   "aire": 3.45,
+   "surface": 51.74,
+   "genre": "3F66AE",
+   "titre": "petit déjeuner chez Tiffany"
+ },
+ {
+   "num": 18,
+   "aire": 4.66,
+   "surface": 65.36,
+   "genre": "3F66AE",
+   "titre": "un amour de swann"
+ },
+ {
+   "num": 19,
+   "aire": 5.17,
+   "surface": 46.28,
+   "genre": "3F66AE",
+   "titre": "lettres de mon moulin"
+ },
+ {
+   "num": 20,
+   "aire": 3.38,
+   "surface": 65.32,
+   "genre": "3F66AE",
+   "titre": "l'écume des jours"
+ },
+ {
+   "num": 21,
+   "aire": 9.09,
+   "surface": 34.44,
+   "genre": "D99203",
+   "titre": "le jardin extraordinaire"
+ },
+ {
+   "num": 22,
+   "aire": 1.03,
+   "surface": 44.47,
+   "genre": "D99203",
+   "titre": "illuminations"
+ },
+ {
+   "num": 23,
+   "aire": 5.01,
+   "surface": 50.14,
+   "genre": "D99203",
+   "titre": "les chansons d'abord"
+ },
+ {
+   "num": 24,
+   "aire": 7.26,
+   "surface": 31.68,
+   "genre": "D99203",
+   "titre": "les fleurs du mal"
+ },
+ {
+   "num": 25,
+   "aire": 3.73,
+   "surface": 53.78,
+   "genre": "D99203",
+   "titre": "cantique des cantiques"
+ },
+ {
+   "num": 26,
+   "aire": 2.21,
+   "surface": 35.37,
+   "genre": "D99203",
+   "titre": "les orientales"
+ },
+ {
+   "num": 27,
+   "aire": 2.28,
+   "surface": 34.06,
+   "genre": "D99203",
+   "titre": "je voudrais pas crever"
+ },
+ {
+   "num": 28,
+   "aire": 5.68,
+   "surface": 36.96,
+   "genre": "D99203",
+   "titre": "axion esti"
+ },
+ {
+   "num": 29,
+   "aire": 2.86,
+   "surface": 42.73,
+   "genre": "827323",
+   "titre": "antigone"
+ },
+ {
+   "num": 30,
+   "aire": 2.12,
+   "surface": 50.69,
+   "genre": "827323",
+   "titre": "le misanthrope"
+ },
+ {
+   "num": 31,
+   "aire": 2.79,
+   "surface": 50.69,
+   "genre": "827323",
+   "titre": "phèdre"
+ },
+ {
+   "num": 32,
+   "aire": 2.96,
+   "surface": 50.69,
+   "genre": "827323",
+   "titre": "les fourberies de scapin"
+ },
+ {
+   "num": 33,
+   "aire": 3.5,
+   "surface": 50.69,
+   "genre": "827323",
+   "titre": "rhinocéros"
+ },
+ {
+   "num": 34,
+   "aire": 1.79,
+   "surface": 49.33,
+   "genre": "73AFE0",
+   "titre": "le petit prince"
+ },
+ {
+   "num": 35,
+   "aire": 1.1,
+   "surface": 9.8,
+   "genre": "73AFE0",
+   "titre": "martine baby sitter"
+ },
+ {
+   "num": 36,
+   "aire": 1.52,
+   "surface": 14.83,
+   "genre": "73AFE0",
+   "titre": "boucle d'or et les trois ours"
+ },
+ {
+   "num": 37,
+   "aire": 5.16,
+   "surface": 47.89,
+   "genre": "73AFE0",
+   "titre": "le retour de l'étalon noir"
+ },
+ {
+   "num": 38,
+   "aire": 3.88,
+   "surface": 47.06,
+   "genre": "73AFE0",
+   "titre": "l'âge heureux, le trésor des hollandais"
+ },
+ {
+   "num": 39,
+   "aire": 0.97,
+   "surface": 40.28,
+   "genre": "73AFE0",
+   "titre": "l'ogre"
+ },
+ {
+   "num": 40,
+   "aire": 0.9,
+   "surface": 24.67,
+   "genre": "73AFE0",
+   "titre": "à fond les rollers !"
+ },
+ {
+   "num": 41,
+   "aire": 7.3,
+   "surface": 28.4,
+   "genre": "73AFE0",
+   "titre": "le magicien d'oz"
+ },
+ {
+   "num": 42,
+   "aire": 12.08,
+   "surface": 47.89,
+   "genre": "73AFE0",
+   "titre": "à la croisé des mondes"
+ },
+ {
+   "num": 43,
+   "aire": 2.48,
+   "surface": 56.28,
+   "genre": "73AFE0",
+   "titre": "coup de gogot"
+ },
+ {
+   "num": 44,
+   "aire": 4.99,
+   "surface": 50.02,
+   "genre": "73AFE0",
+   "titre": "le dernier des vampires"
+ },
+ {
+   "num": 45,
+   "aire": 4.03,
+   "surface": 52.34,
+   "genre": "73AFE0",
+   "titre": "dix petits nègres"
+ },
+ {
+   "num": 46,
+   "aire": 6.13,
+   "surface": 9.49,
+   "genre": "73AFE0",
+   "titre": "les fables de la fontaine"
+ }
+]
